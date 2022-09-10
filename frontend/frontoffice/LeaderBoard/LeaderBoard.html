@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse- Leader Board</a>
+            <div class="header-right">
+              <a class="active" href="../Logged/logged.html">Torna indietro</a>
+              
+            </div>
+          </div>
+    </head>
+    <body onload="getLeaderboards()">
+        
+        <div class="container">
+          <header>
+              <h1>Scoreboard</h1>
+          </header>
+          <article>
+            <h3 id="titleMemory">Memory</h3>
+            <h3 id="titleQuiz">Quiz</h3>
+              <div class="article">
+                  <table id="tableQuiz">
+                    
+                      <thead>
+                          <tr>
+                              <td>Nickname</td>
+                              <td>Score</td>
+                          </tr>
+                      </thead>
+                      <tbody id="newRowQuiz">
+                         </tbody>
+                   </table>
+
+                   <table id="tableMemory">
+                    
+                    <thead>
+                        <tr>
+                            <td>Nickname</td>
+                            <td>Score</td>
+                        </tr>
+                    </thead>
+                    <tbody id="newRowMemory">
+                       </tbody>
+                 </table>
+             </div>
+          </article>
+       </div>
+       <script type="text/javascript" src="LeaderBoard.js"></script>
+       <div>
+
+       </div>
+       <footer>
+        <p>Author: Alvise Amati, Samuele Berni, Andrea Del Pino  &nbsp;&nbsp;|&nbsp;&nbsp;  Progetto Tecnologie Web</p>
+       </footer>
+    </body>
+    
+</html>

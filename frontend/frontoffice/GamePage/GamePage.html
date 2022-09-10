@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse</a>
+            <div class="header-right">
+              <a class="active" id="nickname">Il tuo nickname è: </a>
+              <a class="active" onclick="returnBack()">Torna indietro</a>
+              
+            </div>
+          </div>
+    </head>
+    <body onload="getNickname()">
+        <div class="buttonDiv">
+            <button class="button button1" onclick="window.location.href='../../game/quiz/quiz.html'">Quiz</button>
+            <button class="button button2" onclick="window.location.href='../../game/curiosity/curiosity.html'">Curiosity</button>
+            <button class="button button3" onclick="window.location.href='../../game/memory/memory.html'">Memory</button>
+            <button class="button button3" onclick="window.location.href='../../game/memes/memes.html'">Memes</button>
+        </div>
+       
+        <div id="idbottoni" style="opacity: 1.0 !important;">
+            <button class="buttonsecondario" onclick="window.location.href='../ServiceView/ServiceView.html'">Visualizza servizi commerciali</button>
+            <button class="buttonsecondario" onclick="window.location.href='../ProductView/ProductView.html'">Visualizza prodotti acquistabili</button>
+        </div>
+              
+        
+        <script type="text/javascript" src="gamepage.js"></script>
+        <footer>
+            <p>Author: Alvise Amati, Samuele Berni, Andrea Del Pino  &nbsp;&nbsp;|&nbsp;&nbsp;  Progetto Tecnologie Web</p>
+        </footer>
+    </body>
+   
+
+</html>

@@ -1,0 +1,32 @@
+h2{
+  text-align: center;
+  margin-top: 5%;
+}
+  
+body{
+  background-color: rgb(225, 247, 215) !important;
+}
+
+.reservation{
+  border: 3px solid green;
+  padding: 10px;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 3%;
+  background-color: white;
+  margin-bottom: 5%;
+}
+
+#end{
+  margin-bottom: 10%;
+}
+
+
+
+
+
+

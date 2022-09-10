@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Portale modifica cliente</title>
+        <link rel="stylesheet" type="text/css" href="PortaleModificaCliente.css">
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse- Portale Modifica Cliente</a>
+            <div class="header-right">
+              <a class="active" href="AnagraficaClienti.html">Torna indietro</a>
+              
+            </div>
+          </div>
+    </head>
+    <body>
+        <section>
+            <form id="clientResearchForm">
+                <label>Cerca l'utente da modificare:</label>
+              <input type="text" id="clientIdTextbox">
+              <input type="button" class="button" id="clientResearchButton" value="Cerca">
+            </form>
+        </section>
+        <section>
+            <div id="clientCardContainer"> </div>
+                
+            </div>
+            <div id="btnsActionsOnClient" class="visibleWhenClientIsLoaded">
+                <ul>
+                    <li><button type="button" id="btnModifyClientPassword" class="visibleWhenClientIsLoaded">Modifica password</button></li>
+                    <li><button type="button" id="btnRestoreClientPassword" class="visibleWhenClientIsLoaded">Ripristina password</button></li>
+                    <li><button type="button" id="btnDeleteClientAccount" class="visibleWhenClientIsLoaded">Elimina account</button></li>
+                </ul>
+            </div>
+            <button type="button" id="backBtn" class="visibleWhenClientIsLoaded">Indietro</button>
+            <div class="popupContainer" id = "popupPasswordModificationContainer">
+                <div class="popup">
+                    <h2>Modifica password</h2>
+                    <form class="popupForm">
+                        <input type="text" id="textBoxNewPassword">
+                        <input type="button" id="btnNewPasswordDeliver" value="conferma">
+                    </form>
+                    <button type="button" id="btnExitPasswordModificationPopup">Indietro</button>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript" src="PortaleModificaCliente.js"></script>
+    </body>
+</html>

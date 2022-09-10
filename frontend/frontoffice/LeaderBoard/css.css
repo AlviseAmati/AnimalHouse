@@ -1,0 +1,153 @@
+
+  html, body, h1 {
+    margin: 0; padding: 0;
+}
+
+body {
+    font-family: 'Unica One', sans-serif;
+}
+
+header {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 238, 150);
+    width: 100%;
+}
+
+article {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    flex: 8;
+    margin-top: 10%;
+    background-color: rgb(225, 247, 215) ;
+    
+}
+body > div.container > article > div{
+  background-color: rgb(225, 247, 215) ;
+
+}
+
+#tableQuiz{
+
+float: right;
+margin-left: 100px;
+background-color: white;
+}
+
+#tableMemory{
+  background-color: white;
+  }
+
+h3{
+  display: inline;
+}
+
+#titleQuiz{
+  padding-left: 47%;
+}
+
+
+
+
+h1 {    
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+table {
+    min-width: 320px;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+thead {
+    background-color: black;
+    color: white;
+    font-size: 100%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+a {
+    color: white;
+}
+
+
+.container {
+    width: 100vw; 
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(225, 247, 215);
+}
+
+.article {
+    background-color: aliceblue;
+    text-align: center;
+    
+}
+
+.footer {
+    width: 100%;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.scoreboard-score {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.scoreboard{
+  text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+
+    #tableQuiz{
+        position: absolute;
+        text-align: center;
+       left: 6%;
+       margin-top: 10%;
+    }
+
+    #tableMemory{
+        position: absolute;
+        text-align: center;
+        left: 25%;
+       margin-top: 80%;
+       
+    }
+    #titleQuiz{
+        position: absolute;
+        left: -22%;
+        top: 42%;
+      }
+      #titleMemory{
+        position: absolute;
+        left: 25%;
+        top:77%;
+      }
+    .container {
+        width: 100vw; 
+        height: 120%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        background-color: rgb(225, 247, 215);
+    }
+}

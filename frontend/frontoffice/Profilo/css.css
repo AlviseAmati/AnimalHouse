@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(225, 247, 215) ;
+  }
+
+  .button {
+    display: block;
+    width: max-content;
+    padding: 10px 10px;
+    background-color: #F2A20C;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 40%;
+  }

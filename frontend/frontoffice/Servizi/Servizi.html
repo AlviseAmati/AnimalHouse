@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse- Servizi</a>
+            <div class="header-right">
+              <a class="active" href="../Logged/logged.html">Torna indietro</a>
+              
+            </div>
+          </div>
+    </head>
+    <body onload="loadServices()">
+        <div class="formService">
+            <input class="username" readonly><br>
+            <select name="service" class="services">
+                <option value="Veterinario">Veterinario</option>
+                <option value="Dog sitter">Dog sitter</option>
+                <option value="Toelettatura">Toelettatura</option>
+                <option value="Pensione estiva">Pensione estiva</option>
+            </select><br>
+            <select name="place" class="places">
+                <option value="Rimini">Rimini</option>
+                <option value="Ancona">Ancona</option>
+                <option value="Tarcento">Tarcento</option>
+                <option value="Milano">Milano</option>
+            </select><br>
+            <input type="date" class="date"><br>
+            <label id="message"></label>
+            <button class="Button" onclick="requestService()">Request service</button>
+        </div>
+        <div class="viewOfServices">
+            <button class="Button" onclick="getServices()">View services</button>
+        </div>
+        
+        <script type="text/javascript" src="service.js"></script>
+        <div id="footer">
+            <footer>
+              <p>Author: Alvise Amati, Samuele Berni, Andrea Del Pino  &nbsp;&nbsp;|&nbsp;&nbsp;  Progetto Tecnologie Web</p>
+            </footer>
+          </div>
+    </body>
+   
+</html>

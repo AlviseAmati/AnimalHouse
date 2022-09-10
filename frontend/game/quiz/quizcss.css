@@ -1,0 +1,31 @@
+img {
+    width: 540px;
+    height: 540px;
+}
+
+.button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: #F2A20C;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
+    margin-top: 3%;
+  }
+
+  body{
+    text-align: center;
+    background-color: rgb(225, 247, 215) ;
+  }
+  .buttonDiv{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#conferma{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

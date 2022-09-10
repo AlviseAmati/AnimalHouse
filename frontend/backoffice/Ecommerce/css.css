@@ -1,0 +1,42 @@
+.data{
+    display: flex;
+    gap: 5%;
+}
+#table{
+    background-color: white;
+    }
+
+    table {
+        min-width: 320px;
+        border-collapse: collapse;
+        white-space: nowrap;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    
+    thead {
+        background-color: black;
+        color: white;
+        font-size: 100%;
+    }
+    
+    table, th, td {
+        border: 1px solid black;
+    }
+
+  
+    
+    .row{
+      text-align: center;
+      font-size: 200%;
+      padding: 10px;
+    }
+
+    body{
+        background-color: rgb(225, 247, 215) ;
+    }
+
+    .AddItem{
+        margin-bottom: 40%;
+        
+    }

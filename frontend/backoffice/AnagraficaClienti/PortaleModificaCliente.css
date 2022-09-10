@@ -1,0 +1,67 @@
+.card{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 18px;
+    background: green;
+    padding: 8px;
+    width: auto;
+}
+
+#clientCardContainer{
+    width: 300px;
+    
+}
+
+body{
+    background-color: rgb(225, 247, 215) ;
+  }
+
+#btnsActionsOnClient{
+    visibility: hidden;
+}
+
+#backBtn{
+    visibility: hidden;
+}
+
+.popupContainer{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popupContainer.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup{
+    background-color: #fff;
+}
+
+.button {
+   
+    width: max-content;
+    padding: 10px 10px;
+    background-color: #F2A20C;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  #clientResearchForm{
+    margin-top: 2%;
+  }
+
+
+

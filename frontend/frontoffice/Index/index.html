@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="indexcss.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h2>Progetto: AnimalHouse</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <div class="form">
+                    <h1>Crea Un Account</h1>
+                    <input type="text" placeholder="Name" id="usernameRegister"/>
+                    <input placeholder="Email" id="emailRegister"/>
+                    <input type="password" placeholder="Password" id="passwordRegister" />
+                    <label id="errorRegister"></label>
+                    <button id="register">Sign Up</button>
+                </div>
+            </div>
+            <div class="form-container sign-in-container">
+                <div class="form">
+                    <h1>Login</h1>
+                    <input placeholder="Username" id="usernameLogin"/>
+                    <input type="password" placeholder="Password" id="passwordLogin"/>
+                    <label id="error"></label>
+                    <button id="login">Sign In</button>
+                </div>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Buon Giorno</h1>
+                        <p>Per favore per loggarti usa i tuoi dati personali</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Buon Giorno</h1>
+                        <p>Se non sei ancora registrato registrati di seguito</p>
+                        <button class="ghost" id="signUp">Registrati</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="indexjs.js"></script>
+        <a id="giocaconnoi" href="../nickname/nickname.html">Gioca con Noi</a>
+    </body>
+</html>

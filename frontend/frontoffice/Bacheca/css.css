@@ -1,0 +1,61 @@
+
+ 
+  .card__button {
+    display: block;
+    width: max-content;
+    padding: 1.125rem 2rem;
+    background-color: #F2A20C;
+    color: white;
+    border-radius: .5rem;
+    font-weight: 600;
+  }
+
+ a:hover {
+    background-color: #F2A20C;
+    color: rgb(40, 10, 173);
+    text-decoration: underline;
+  }
+
+  #textInsert{
+    width: 300px;
+  }
+
+
+.singlePost{
+  border: 3px solid green;
+  padding: 10px;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 5%;
+  background-color: white;
+ 
+}
+
+.postImage{
+  width: 50%;
+}
+.allPost{
+  float: center;
+}
+
+#postFooter{
+  text-align: right;
+}
+
+body{
+  background-color: rgb(225, 247, 215) ;
+}
+
+footer{
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 700px) {
+  #spaziatura{
+    margin-top: 10%;
+  }
+}

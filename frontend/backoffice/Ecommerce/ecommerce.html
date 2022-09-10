@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse</a>
+            <div class="header-right">
+              <a class="active" href="#home">Home</a>
+              <a class="active" href="../Back-Office/BackOffice.html">Torna indietro</a>
+            </div>
+          </div>
+    </head>
+    <body onload="loadItems()">
+        <table id="table">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody class="EditCards">
+
+            </tbody>
+         </table>
+
+        
+        <div class="AddItem">
+            <input placeholder="Name" id="name"/>
+            <input placeholder="Price" id="price"/>
+            <input placeholder="Description" id="description"/>
+            <input placeholder="Image Link" id="image"/>
+            <input placeholder="Category" id="category"/>
+            <button onclick="addItem()">Add Item</button>
+        </div>
+        <script type="text/javascript" src="ecommerce.js"></script>
+        <footer>
+            <p>Author: Alvise Amati, Samuele Berni, Andrea Del Pino  &nbsp;&nbsp;|&nbsp;&nbsp;  Progetto Tecnologie Web</p>
+        </footer>
+    </body>
+</html>

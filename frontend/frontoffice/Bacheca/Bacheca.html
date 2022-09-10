@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link href="../../HeaderFooter.css" rel="stylesheet" type="text/css">
+        <link href="css.css" rel="stylesheet" type="text/css">
+        <div class="header">
+            <a href="#default" class="logo">AnimalHouse- Bacheca</a>
+            <div class="header-right">
+              <a class="active" href="../Logged/logged.html">Torna indietro</a>
+              
+            </div>
+          </div>
+    </head>
+    <body onload="getPosts()">
+    
+        
+      <div style="margin-top: 20px" class="insertPost">
+        
+          <label for="ftitle">Titolo:</label><br>
+          <input class="title" name="ftitle" placeholder="John"><br>
+          <label for="flink">Link Immagine:</label><br>
+          <input class="link" name="flink" placeholder="Link"><br>
+          <label for="textarea">Testo:</label><br>
+          <textarea class="textarea" name="textarea" rows="4" cols="50" placeholder="Scrivi qua il tuo post per la bacheca"></textarea><br>
+          <label id="message"></label>
+          <button class="card__button" onclick="addPost()">Aggiungi il post</button>
+        
+      </div>
+
+      <div class="allPost">
+          
+      </div>
+
+      <script type="text/javascript" src="bacheca.js"></script>
+
+      <div id="spaziatura" style="margin-top: 10%">
+
+      </div>
+      <footer>
+        <p>Author: Alvise Amati, Samuele Berni, Andrea Del Pino  &nbsp;&nbsp;|&nbsp;&nbsp;  Progetto Tecnologie Web</p>
+      </footer>
+    </body>
+   
+</html>
