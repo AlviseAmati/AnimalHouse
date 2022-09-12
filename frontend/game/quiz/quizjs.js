@@ -14,7 +14,7 @@ async function getData(){
     data = [data0,data1,data2,data3]
     if(response0.status == 200 && response1.status == 200 && response2.status == 200 && response3.status == 200){
         document.querySelector("body > img").src = data0.image_link;
-        var random = Math.floor(Math.random() * (3 - 0 + 1) ) + 0;
+        var random = Math.floor(Math.random() * (3 - 0 + 1) ) + 0; //per posiizonarli in ordine casulae fa random da 0 a 4
         for(var i = 0; i < 4; i++){
             document.querySelector("#label" + random + "").innerHTML = data[i].name;
             document.querySelector("#answer" + random + "").value = data[i].name;
@@ -29,10 +29,10 @@ async function getData(){
     uncheckedRadioButtons();
 }
 
-function getResult(){
+function getResult(){ //verifica se risposta e giusta o sbaglaita
     for(radioButton of document.querySelectorAll("input")){
         if(radioButton.checked){
-            if(radioButton.value == (data[0].name)){
+            if(radioButton.value == (data[0].name)){ //controllo nome del primo se sono uguali
                 document.querySelector("#result").innerHTML = "RISPOSTA CORRETTA";
                 score++;
             }else{
@@ -42,7 +42,7 @@ function getResult(){
     }
 }
 
-function uncheckedRadioButtons(){
+function uncheckedRadioButtons(){ // svuota radiobutton
     for(radioButton of document.querySelectorAll("input")){
         if(radioButton.checked){
             radioButton.checked = false;
@@ -51,14 +51,14 @@ function uncheckedRadioButtons(){
 }
     
 
-document.addEventListener('visibilitychange', function(event) {
+document.addEventListener('visibilitychange', function(event) { //pezzo codice nascosto che parte quando utente esce da pagina
     event.preventDefault()
     if (document.visibilityState == 'hidden') { 
         closingCode()
     }
 });
 
-async function closingCode(){
+async function closingCode(){ //invia score al server
     if(score != 0){
         console.log(window.localStorage.getItem('username'));
         var response = await fetch("http://127.0.0.1:8081/addScore",{

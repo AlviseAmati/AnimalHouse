@@ -1,24 +1,25 @@
-let data;
+//dischiarazione variabili
+let data;   
 const cards = document.querySelectorAll(".card");
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 let timerId;
 var score = 0;
-function flipCard({target: clickedCard}) {
-    if(cardOne !== clickedCard && !disableDeck) {
+function flipCard({target: clickedCard}) { //gira e prende valore carta (come parametro hai  html della carta cliccata)
+    if(cardOne !== clickedCard && !disableDeck) {//secarta e 1 e carta 2 sono uguali o diversi torno vuoto e si gira
         clickedCard.classList.add("flip");
-        if(!cardOne) { 
+        if(!cardOne) { //se carta 1 non e nulla fa
             return cardOne = clickedCard;
         }
-        cardTwo = clickedCard;
+        cardTwo = clickedCard;// secondo giro di ciclo passa qua
         disableDeck = true;
-        let cardOneImg = cardOne.querySelector(".back-view img").src,
+        let cardOneImg = cardOne.querySelector(".back-view img").src, //prende le immagini della prima e seconda carta e le passa amtch cards
         cardTwoImg = cardTwo.querySelector(".back-view img").src;
         matchCards(cardOneImg, cardTwoImg);
     }
 }
-function matchCards(img1, img2) {
+function matchCards(img1, img2) { // verifica che le 2 carte siano giuste
     if(img1 === img2) {
         matched++;
         if(matched == 8) {
@@ -28,12 +29,12 @@ function matchCards(img1, img2) {
             document.getElementById("counter").innerHTML = "HAI VINTO!";
 		    clearInterval(startTimer);
         }
-        cardOne.removeEventListener("click", flipCard);
+        cardOne.removeEventListener("click", flipCard); //rimuovi gli event aggiunti se no se clicchi ripartono
         cardTwo.removeEventListener("click", flipCard);
         cardOne = cardTwo = "";
         return disableDeck = false;
     }
-    setTimeout(() => {
+    setTimeout(() => { // shake 400 ms
         cardOne.classList.add("shake");
         cardTwo.classList.add("shake");
     }, 400);
@@ -48,12 +49,12 @@ function shuffleCard() {
     matched = 0;
     disableDeck = false;
     cardOne = cardTwo = "";
-    let arr = [0,1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7];
-    arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-    cards.forEach((card, i) => {
-        card.classList.remove("flip");
+    let arr = [0,1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7]; // crea arrey numeri 2  da 7 perche clicchi 2 carte
+    arr.sort(() => Math.random() > 0.5 ? 1 : -1); //mischia l'array sopra sposta i vari indici avanti o dietro in base al math .random
+    cards.forEach((card, i) => { //foreach su tutto oggetti con classe carta in html
+        card.classList.remove("flip"); //gira tutte le carte con classe flip
         card.querySelector(".back-view img").src = data[arr[i]].image_link;
-        card.addEventListener("click", flipCard);
+        card.addEventListener("click", flipCard); //ogni click fa funzione flip card
     });
     clearInterval(timerId);
     setTimer();
@@ -65,7 +66,7 @@ cards.forEach(card => {
 });
 
 
-async function requestImage(){
+async function requestImage(){ //genera e prende da api immagine carte
     
     var response0 = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand");
     var data0 = await response0.json();
@@ -87,17 +88,17 @@ async function requestImage(){
     
     
     data = [data0,data1,data2,data3,data4,data5,data6,data7];
-    shuffleCard();
+    shuffleCard(); // funzione carte
 }
 
 function setTimer(){
 	document.getElementById("counter").innerHTML = 60;
-	timerId = setInterval(startTimer,1000);
+	timerId = setInterval(startTimer,1000); //start timer una voplta ogni secondo
 }
 
 function startTimer(){
 	if(parseInt(document.getElementById("counter").innerHTML) > 0){
-		document.getElementById("counter").innerHTML = parseInt(document.getElementById("counter").innerHTML) - 1;
+		document.getElementById("counter").innerHTML = parseInt(document.getElementById("counter").innerHTML) - 1; // finche counter maggiore 60 decremente 1 al secondo
 	}else if(parseInt(document.getElementById("counter").innerHTML) == 0){
 		document.getElementById("counter").innerHTML = "HAI PERSO!";
 		clearInterval(timerId);
@@ -114,7 +115,7 @@ document.addEventListener('visibilitychange', function(event) {
     }
 });
 
-async function closingCode(event){
+async function closingCode(event){ //passi a server nome score e gioco 
     if(score != 0){
         var response = await fetch("http://127.0.0.1:8081/addScore",{
             method: "POST",
@@ -136,7 +137,7 @@ async function closingCode(event){
         }else{
             console.log(response.status)
         }
-        if(window.localStorage.getItem('username') != null){
+        if(window.localStorage.getItem('username') != null){//se player loggato
             var response = await fetch("http://127.0.0.1:8081/addBestMemoryResult",{
                 method: "POST",
                 headers:{

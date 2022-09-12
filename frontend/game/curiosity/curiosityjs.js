@@ -1,6 +1,6 @@
 async function getData(){
-    var response0 = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand");
-    var data0 = await response0.json();
+    var response0 = await fetch("https://zoo-animal-api.herokuapp.com/animals/rand"); //richesta api
+    var data0 = await response0.json(); // risposta api
     if(response0.status == 200){
         document.querySelector("body > img").src = data0.image_link;
         document.querySelector("#name1").innerHTML = data0.name;
