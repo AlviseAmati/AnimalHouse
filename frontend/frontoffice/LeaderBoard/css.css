@@ -132,13 +132,13 @@ a {
     }
     #titleQuiz{
         position: absolute;
-        left: -22%;
-        top: 42%;
+        left: -20%;
+        top: 41%;
       }
       #titleMemory{
         position: absolute;
         left: 25%;
-        top:77%;
+        top:72%;
       }
     .container {
         width: 100vw; 

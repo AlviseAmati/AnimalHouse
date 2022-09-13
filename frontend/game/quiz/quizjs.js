@@ -14,7 +14,7 @@ async function getData(){
     data = [data0,data1,data2,data3]
     if(response0.status == 200 && response1.status == 200 && response2.status == 200 && response3.status == 200){
         document.querySelector("body > img").src = data0.image_link;
-        var random = Math.floor(Math.random() * (3 - 0 + 1) ) + 0; //per posiizonarli in ordine casulae fa random da 0 a 4
+        var random = Math.floor(Math.random() * (3 - 0 + 1) ) + 0;
         for(var i = 0; i < 4; i++){
             document.querySelector("#label" + random + "").innerHTML = data[i].name;
             document.querySelector("#answer" + random + "").value = data[i].name;
@@ -29,10 +29,10 @@ async function getData(){
     uncheckedRadioButtons();
 }
 
-function getResult(){ //verifica se risposta e giusta o sbaglaita
+function getResult(){
     for(radioButton of document.querySelectorAll("input")){
         if(radioButton.checked){
-            if(radioButton.value == (data[0].name)){ //controllo nome del primo se sono uguali
+            if(radioButton.value == (data[0].name)){
                 document.querySelector("#result").innerHTML = "RISPOSTA CORRETTA";
                 score++;
             }else{
@@ -42,7 +42,7 @@ function getResult(){ //verifica se risposta e giusta o sbaglaita
     }
 }
 
-function uncheckedRadioButtons(){ // svuota radiobutton
+function uncheckedRadioButtons(){
     for(radioButton of document.querySelectorAll("input")){
         if(radioButton.checked){
             radioButton.checked = false;
@@ -51,14 +51,14 @@ function uncheckedRadioButtons(){ // svuota radiobutton
 }
     
 
-document.addEventListener('visibilitychange', function(event) { //pezzo codice nascosto che parte quando utente esce da pagina
+document.addEventListener('visibilitychange', function(event) {
     event.preventDefault()
     if (document.visibilityState == 'hidden') { 
         closingCode()
     }
 });
 
-async function closingCode(){ //invia score al server
+async function closingCode(){
     if(score != 0){
         console.log(window.localStorage.getItem('username'));
         var response = await fetch("http://127.0.0.1:8081/addScore",{
